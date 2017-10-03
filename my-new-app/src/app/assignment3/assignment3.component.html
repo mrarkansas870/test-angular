@@ -1,0 +1,9 @@
+<!-- 
+  1. toggle the display 
+  2. log all button clicks in an array w/ timestamp
+  3. starting w/ 5 entry give blue background (ngStyle) and white color (ngClass)
+-->
+
+<button (click)="onToggleDisplay()">Display Details</button>
+<p *ngIf="secretPassword;">Secret Password = tuna</p>
+<div *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': logItem >= 5}">{{logItem}} </div>
